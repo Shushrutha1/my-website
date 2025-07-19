@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Resume - Shushrutha T</title>
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .resume-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .resume-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .resume-card h4 {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .resume-card p,
+    .resume-card li {
+      font-size: 14px;
+    }
+
+    .resume-title {
+      margin-top: 40px;
+      font-size: 24px;
+      color: #444;
+      font-weight: 600;
+      border-left: 4px solid #149ddd;
+      padding-left: 10px;
+    }
+
+    .category-buttons {
+      margin-bottom: 30px;
+    }
+
+    .category-buttons button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background-color: #149ddd;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    .category-buttons button:hover {
+      background-color: #107ab1;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="resume-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="resume.html" class="active"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <!-- <li><a href="index.html"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li> -->
+        <li><a href="index.html"><i class="bi bi-hdd-stack navicon"></i><span>Projects</span></a></li>
+        <li><a href="index.html"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Resume</li>
+          </ol>
+        </nav>
+        <h1>Resume</h1>
+      </div>
+    </div>
+
+    <section id="resume" class="resume section">
+      <div class="container" data-aos="fade-up">
+          <p> One click away to know more about my : </p>
+        <div class="category-buttons">
+          <!-- Category Buttons -->
+          <button onclick="showCategory('education')">Education</button>
+          <button onclick="showCategory('achievements')">Achievements</button>
+          <button onclick="showCategory('skills')">Skills & Certifications</button>
+        </div>
+
+        <div id="education" class="category-content hidden">
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-card">
+            <h4>B.Tech in CSM(Computer Science & Artificial Intelligence)</h4>
+            <h5>2023 - 2027</h5>
+            <p><em>CMR Technical Campus</em></p>
+          </div>
+          <div class="resume-card">
+            <h4>BS in Data Science</h4>
+            <h5>2023 - Present</h5>
+            <p><em>IIT Madras (Online)</em></p>
+            <p>Completed Semester 1, currently in Semester 2.(foundation level)</p>
+          </div>
+          <div class="resume-card">
+            <h4>Intermediate - MPC</h4>
+            <h5>2020-2022</h5>
+            <p><em>Pragathi Junior College</em></p>
+            <p>Completed with a result of 98%.</p>
+          </div>
+          <div class="resume-card">
+            <h4>High School(V to X class) </h4>
+            <h5>2015-2020</h5>
+            <p><em>Nalgonda Public School(CBSE)</em></p>
+            <p>Completed with a CGPA of 9.3 in X</p>
+          </div>
+        </div>
+
+        <div id="achievements" class="category-content hidden">
+          <h3 class="resume-title">Clubs & Achievements</h3>
+          <div class="resume-card">
+            <p><em>Top 50 in Smart India Hackathon,2024</em></p>
+          </div>
+          <div class="resume-card">
+            <p><em>Placed 11th rank in the Unified International English Olympiad in National Level (UIEO-2019) </em></p>
+          </div>
+          <div class="resume-card">
+            <p><em>Executive Member – CSI(Computer Society of India)</em></p>
+          </div>
+          <div class="resume-card">
+            <p><em>Member of ISTE(The Indian Society for Technical Education)</em></p>
+          </div>
+        </div>
+
+        <div id="skills" class="category-content hidden">
+          <h3 class="resume-title">Skills & Certifications</h3>
+          <div class="resume-card">
+            <p>🔐 <em>Quantum Computing & Cryptography</em> – Deep insights into futuristic tech blending quantum theory with encryption techniques.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🐍 <em>Programming in Python</em> – Hands-on experience in scripting, logic building & real-world applications using Python.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🌐 <em>Introduction to Internet of Things</em> – Understanding of IoT architecture, protocols, and edge device integrations.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>☁️ <em>Cloud Computing</em> – NPTEL Certified | 🏅 Elite (71%) – Gained skills in virtualization, cloud services, and deployment models.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>📊 <em>Data Mining</em> – NPTEL Certified (53%) – Covered classification, clustering, and data pre-processing techniques.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🔗 <em>Blockchain</em> – NPTEL Certified (47%) – Explored decentralized networks, hashing, consensus algorithms & smart contracts.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🎓 <em>C Programming</em> – Certified by Spoken Tutorial, IIT Bombay – Gained mastery over C syntax, loops, functions, and memory handling.</p>
+          </div>
+          <div class="resume-card">
+            <p>💻 <strong>Java</strong> – Built solid object-oriented solutions in Java with strong understanding of class hierarchies, exception handling, and real-world application development.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🐍 <strong>Python</strong> – Used Python to automate tasks, analyze data, and write clean, readable code across domains with practical problem-solving.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🌊 <strong>C / C++</strong> – Strong foundation from pointers and memory management to OOP concepts and STL — bridging low-level logic with high-level design.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>⚛️ <strong>ReactJS</strong> – Developed dynamic and responsive UIs using ReactJS, with hands-on experience in hooks, state management, and component-driven architecture.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🟩 <strong>NodeJS</strong> – Created scalable backend services and RESTful APIs using NodeJS & Express, giving life to full-stack applications.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🛢️ <strong>SQL</strong> – Designed and managed relational databases, efficiently handling queries, joins, indexing, and normalization for precise data manipulation.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🌐 <strong>PHP</strong> – Developed secure and structured PHP scripts for server-side applications, integrating seamlessly with MySQL and front-end tools.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🛠️ <strong>phpMyAdmin</strong> – Utilized phpMyAdmin for smooth database management with a visual interface — handling tables, users, and SQL queries effortlessly.</p>
+          </div>
+        
+          <div class="resume-card">
+            <p>🌀 <strong>Angular (Basics)</strong> – Gained introductory knowledge of Angular’s component-based architecture, two-way data binding, and module system.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Shushrutha Thangallapally</h3>
+      <!-- <p>Thank you for visiting my resume page!</p> -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="#"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function showCategory(category) {
+      // Hide all categories
+      const categories = document.querySelectorAll('.category-content');
+      categories.forEach(function (cat) {
+        cat.classList.add('hidden');
+      });
+
+      // Show the selected category
+      const selectedCategory = document.getElementById(category);
+      selectedCategory.classList.remove('hidden');
+    }
+    
+  </script>
+</body>
+
+</html>
