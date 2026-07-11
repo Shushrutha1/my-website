@@ -1,515 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Shusuhrutha T</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shushrutha Thangallapally - AI/ML</title>
+<meta name="description" content="Portfolio of Shushrutha Thangallapally - AI/ML Engineer &amp; Full-Stack Developer building computer vision, web platforms and cloud-based systems.">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
+<link rel="icon" href="assets/img/favicon.jpg">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="index-page">
+<canvas id="neuralCanvas"></canvas>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div id="scroll-progress"></div>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
+<header class="nav">
+  <a href="#home" class="logo"><span class="mono-tag">ST</span> Shushrutha</a>
+  <nav class="links" id="navLinks">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="assets/Shushrutha_Thangallapally_Resume.pdf" target="_blank" class="nav-cta"><span class="dot"></span> Open to opportunities</a>
+  <i class="bi bi-list burger" id="burger"></i>
+</header>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div>
+        <div class="eyebrow">B.Tech CSE (AI &amp; ML) · Hyderabad, India</div>
+        <h1>Shushrutha<br><span class="grad">Thangallapally</span></h1>
+        <p class="role-line">I build <span class="role-typed" id="roleTyped"></span><span class="role-cursor"></span></p>
+        <p class="lede">Final-year AI &amp; ML engineer who ships real software - from a YOLOv8 computer-vision system tracking Kho-Kho athletes to production web portals running live for government colleges and charitable trusts.</p>
+        <div class="btn-row">
+          <a href="assets/Shushrutha_Thangallapally_Resume.pdf" target="_blank" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> View Resume</a>
+          <a href="#contact" class="btn btn-outline"><i class="bi bi-chat-dots"></i> Let's Talk</a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/Shushrutha1" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/shushrutha-t-00a8032bb/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://leetcode.com/u/shushrutha10/" target="_blank" aria-label="LeetCode"><i class="bi bi-code-slash"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-<!--         <li><a href="resume.html"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li> -->
-        <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li> -->
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Projects</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
+      <div class="hero-orbit-wrap">
+        <div class="orbit-ring r3"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-photo">
+          <img src="assets/img/profile_pic1.jpg" alt="Shushrutha Thangallapally" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="fallback-initials" style="display:none;">ST</div>
+        </div>
+        <!-- <div class="orbit-badge" style="top:-4%; left:46%;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+        <div class="orbit-badge counter" style="top:46%; right:-4%;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+        <div class="orbit-badge" style="bottom:-4%; left:46%;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"></div>
+        <div class="orbit-badge counter" style="top:46%; left:-4%;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div> -->
+      </div>
+    </div>
+    <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+  </section>
 
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <img src="assets/img/Shushrutha.jpg" alt="">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Shushrutha</h2><br>
-            <h2>Thangallapally</h2>
-            <p>I'm <span class="typed" data-typed-items="AIML Engineer, Full Stack Developer, MERN Stack Enthusiast, LeetCode Warrior ">Student</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <!-- <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>-->
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="https://github.com/Shushrutha1" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://leetcode.com/u/shushrutha10/" target="_blank"><i class="bi bi-code-slash"></i></a>
-              <a href="https://www.linkedin.com/in/shushrutha-t-00a8032bb/"><i class="bi bi-linkedin"></i></a>
-            </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="section-heading">Logic meets imagination.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a final-year <b>Computer Science (AI &amp; ML)</b> student who moves comfortably across the stack - <b>machine learning</b>, <b>computer vision</b>, <b>full-stack web development</b>, and <b>cloud-based systems</b>. I currently hold dual credentials as a <b>ServiceNow Certified System Administrator (CSA)</b> and <b>Certified Application Developer (CAD)</b>, alongside a growing foundation in <b>data science from IIT Madras</b>.</p>
+          <p>What I enjoy most is turning an idea into something people actually use: a donor-management portal that replaced paperwork for a welfare trust, a sports-analytics pipeline that tracks athletes frame by frame, admin dashboards running quietly behind 20+ government colleges. I care about clean architecture, readable code, and shipping things that hold up in the real world.</p>
+          <div class="stat-grid">
+            <div class="stat-card"><div class="num">10+</div><div class="label">GITHUB REPOSITORIES</div></div>
+            <div class="stat-card"><div class="num">8+</div><div class="label">PROJECTS SHIPPED</div></div>
+            <div class="stat-card"><div class="num">2</div><div class="label">SERVICENOW CERTS</div></div>
+            <div class="stat-card"><div class="num">2027</div><div class="label">EXPECTED GRADUATION</div></div>
+          </div>
+        </div>
+        <div class="edu-col reveal">
+          <div class="edu-card">
+            <h4>B.Tech, Computer Science (AI &amp; ML)</h4>
+            <div class="org">CMR Technical Campus, Hyderabad</div>
+            <div class="meta">Sep 2023 – May 2027 (Expected) · CGPA 9.1/10.0</div>
+          </div>
+          <div class="edu-card">
+            <h4>Foundation Certificate, Data Science &amp; Applications</h4>
+            <div class="org">IIT Madras (Remote)</div>
+            <div class="meta">Completed May 2026</div>
+          </div>
+          <div class="edu-card">
+            <h4>Currently exploring</h4>
+            <div class="org">Generative AI · Agentic AI · RAG Applications</div>
+            <div class="meta">Applying LLM-driven systems to real product ideas</div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-    </section><!-- /Hero Section -->
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Skills</div>
+        <h2 class="section-heading">The stack I build with.</h2>
+        <p class="section-sub">Filter by category - every icon here is something I've shipped code with, not just read about.</p>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+      <div class="tabs reveal" id="skillTabs">
+        <button class="tab-btn active" data-tab="lang">Languages</button>
+        <button class="tab-btn" data-tab="ai">AI / ML &amp; CV</button>
+        <button class="tab-btn" data-tab="web">Frameworks &amp; Web</button>
+        <button class="tab-btn" data-tab="data">Databases &amp; Cloud</button>
+        <button class="tab-btn" data-tab="tools">Dev Tools</button>
+      </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <h3>Hi, I'm Shushrutha !</h3>
-        <p>
-  A passionate explorer of <b>technology</b>, <b>creativity</b>, and <b>purpose</b>. I'm currently pursuing a 
-  <b>B.Tech in Artificial Intelligence & Machine Learning</b> and a 
-  <b>B.S. in Data Science from IIT Madras</b>. I blend <b>logic</b> with <b>imagination</b> to build 
-  <b>practical, real-world solutions</b>—from <b>cloud computing</b> to <b>AI</b>, and from 
-  <b>full-stack development</b> to <b>tech community engagement</b>. 
-  My journey is all about <b>growing</b>, <b>leading</b>, and <b>making meaningful impact</b> through every 
-  line of code and collaboration.
-</p>
-
-        </div><!-- End Section Title -->
-
-        <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="assets/Resume.pdf" target="_blank" class="btn resume-btn">View Resume</a>
-</div>
-
-
-
-    </section><!-- /About Section -->
-
-<section id="skills" class="skills section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-  </div>
-
-  <div class="container skills-categories" data-aos="fade-up" data-aos-delay="100">
-
-    <!-- 🟦 Programming Languages -->
-    <div class="skill-group">
-      <h4>Languages</h4>
-      <div class="skill-items">
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-          <p>Java</p>
+      <div class="skill-panel active" data-panel="lang">
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div><span>Java</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div><span>JavaScript</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"></div><span>C</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"></div><span>C++</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"></div><span>Python</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"></div><span>C#.NET</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"></div><span>Kotlin</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-database"></i></div><span>SQL</span></div>
         </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-          <p>JavaScript</p>
+      </div>
+
+      <div class="skill-panel" data-panel="ai">
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"></div><span>TensorFlow</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"></div><span>PyTorch</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"></div><span>OpenCV</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-cpu"></i></div><span>Machine Learning</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-stars"></i></div><span>Generative AI</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-diagram-3"></i></div><span>Agentic AI</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-search"></i></div><span>RAG Applications</span></div>
         </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
-          <p>C</p>
+      </div>
+
+      <div class="skill-panel" data-panel="web">
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"></div><span>React.js</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"></div><span>Node.js</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"></div><span>Express.js</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"></div><span>Angular</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"></div><span>Flutter</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></div><span>Spring Boot</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div><span>HTML5</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div><span>CSS3</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"></div><span>Bootstrap</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"></div><span>jQuery</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"></div><span>PHP</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-hdd-network"></i></div><span>REST APIs</span></div>
         </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-          <p>C++</p>
+      </div>
+
+      <div class="skill-panel" data-panel="data">
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div><span>MySQL</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"></div><span>MongoDB</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"></div><span>Firebase</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"></div><span>Microsoft Azure</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-cloud-check"></i></div><span>ServiceNow</span></div>
         </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-          <p>HTML</p>
+      </div>
+
+      <div class="skill-panel" data-panel="tools">
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"></div><span>Git</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div><span>GitHub</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"></div><span>VS Code</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"></div><span>Android Studio</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"></div><span>Visual Studio</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"></div><span>Postman</span></div>
+          <div class="skill-chip"><div class="ic-wrap"><i class="bi bi-server"></i></div><span>phpMyAdmin</span></div>
         </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-          <p>PHP</p>
+      </div>
+
+      <div class="core-tags reveal">
+        <span class="tag">Data Structures &amp; Algorithms</span>
+        <span class="tag">Operating Systems</span>
+        <span class="tag">DBMS</span>
+        <span class="tag">Computer Networks</span>
+        <span class="tag">OOP</span>
+        <span class="tag">Software Engineering</span>
+        <span class="tag">SDLC</span>
+        <span class="tag">Agile</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience</div>
+        <h2 class="section-heading">Where I've put this to work.</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <h4>Artificial Intelligence Intern</h4>
+          <div class="org">Cyro Stack IT Solutions (OPC) Pvt. Ltd. · Aug 2025 – Nov 2025</div>
+          <ul>
+            <li>Developed and evaluated multiple machine learning models in Python and TensorFlow to support predictive analytics use cases.</li>
+            <li>Processed large structured datasets through data preprocessing, feature engineering, and exploratory data analysis (EDA) to improve model readiness and reliability.</li>
+            <li>Applied hyperparameter tuning and evaluation metrics - Accuracy, Precision, Recall, F1-score - to optimize model performance.</li>
+            <li>Collaborated with a cross-functional team in an Agile environment to deliver AI solutions on schedule.</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- 🎨 Frontend -->
-    <div class="skill-group">
-      <h4>Frontend</h4>
-      <div class="skill-items">
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-          <p>CSS</p>
-        </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-          <p>React</p>
-        </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
-          <p>Angular</p>
-        </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Projects</div>
+        <h2 class="section-heading">Things I've built and shipped.</h2>
+        <p class="section-sub">A mix of computer vision, full-stack platforms, and infrastructure running live for real organizations.</p>
       </div>
-    </div>
+      <div class="project-grid">
 
-    <!-- ⚙️ Backend -->
-    <div class="skill-group">
-      <h4>Backend</h4>
-      <div class="skill-items">
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-          <p>PHP</p>
-        </div>
-        <!-- You can add Node.js or Express if used -->
-      </div>
-    </div>
-
-    <!-- 🗃️ Database & Tools -->
-    <div class="skill-group">
-      <h4>Databases & Tools</h4>
-      <div class="skill-items">
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-          <p>MySQL</p>
-        </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-          <p>Python</p>
-        </div>
-        <div class="skill-icon-box">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-          <p>Git</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>
-          Here's a showcase of what I've been building — real-world projects that combine innovation, functionality, and a bit of fun along the way.
-        </p>
-        
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                </svg>
-                <!-- <i class="bi bi-activity"></i> -->
-                 <img src="assets/img/SRC.png" alt="SRC Icon"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;">
-       
-              </div>
-              <a href="https://www.nalgondaeconomicsforum.org/SRC/" class="stretched-link" target="_blank" rel="noopener">
-                <h3>SRC Raghavendra Colony</h3>
-              </a>
-              <p>🔹 Deployed a public-facing website using Static IP.<br>
-                 🔹 Owned full setup & backend support.</p><br>
-                  <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://www.nalgondaeconomicsforum.org/SRC/" target="_blank" class="btn resume-btn">View Live App</a>
-</div>
-            </div>
-          </div><!-- End Service Item -->
-
-         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                </svg>
-                <!-- <i class="bi bi-broadcast"></i> -->
-                 <img src="assets/img/ET.png" alt="SRC Icon"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;">
-       
-              </div>
-              <a href="https://www.exceltuitions.com/" class="stretched-link" target="_blank" rel="noopener">
-                <h3>Excel Tuitions</h3>
-              </a>              
-              <p>🔹 Designing a responsive educational website.<br>
-                 🔹 Working on user interface and content structure.</p>
-                 <br>
-                  <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://www.exceltuitions.com/" target="_blank" class="btn resume-btn">View Live App</a>
-</div>
-            </div>
-          </div><!-- End Service Item -->
-
-           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-                </svg>
-                <!-- <i class="bi bi-calendar4-week icon"></i> -->
-                   <img src="assets/img/SAI.png" alt="SRC Icon"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;">
-              </div>
-                <a href="https://www.nalgondaeconomicsforum.org/SAI/" class="stretched-link" target="_blank" rel="noopener">
-                <h3>Shiridi Sai Trust Welfare Portal (Nalgonda)</h3>
-              </a>
-              <p>🔹 Built end-to-end donor and voucher management system using PHP, MySQL, Bootstrap & DataTables.<br>
-                 🔹 Implemented CRUD operations, reporting features, and clean UI to support real-time welfare data tracking.</p><br>
-                  <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://www.nalgondaeconomicsforum.org/SAI" target="_blank" class="btn resume-btn">View Live App</a>
-</div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-red position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path class="blob-shape" stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-                </svg>
-                <!-- <i class="bi bi-easel"></i> -->
-                 <img src="assets/img/NEF.png" alt="SRC Icon"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;">
-       
-
-              </div>
-              <a href="#" target="_blank" rel="noopener">
-                <h3>Nalgonda Economics Forum</h3>
-              </a>
-              <p>🔹 Maintained website for an academic economics forum.<br>
-                 🔹 Assisted in both design and backend troubleshooting.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item item-indigo position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                </svg>
-                <!-- <i class="bi bi-bounding-box-circles"></i> -->
-                 <img src="assets/img/TS.png" alt="SRC Icon"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;">
-       
-              </div>
-              <a href="#"  target="_blank" rel="noopener">
-                <h3>TSWREIS Women’s Colleges</h3>
-              </a>
-              <p>🔹 Offered software support across 20+ govt colleges.<br>
-                 🔹 Managed data flow & system availability.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-        
-
-          <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item item-pink position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                </svg>
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link" onclick="event.preventDefault();">
-                <h3>Stay Tuned...</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-            </div>end service item 
-          </div> -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-
-
-    <!-- Testimonials Section -->
-    <!-- <section id="testimonials" class="testimonials section"> -->
-    <!-- </section>/Testimonials Section -->
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up"><h2>Contact</h2>
-
-    <!-- <p>If you'd like to get in touch, there are several convenient ways to reach me:</p><br> -->
-   <p>One tap is all it takes — connect via call, WhatsApp, email, or maps.</p>
-   
-    
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade" data-aos-delay="100">
-
-    <div class="row gy-4">
-      <!-- Flexbox to make the contact info and form side-by-side -->
-      <div class="d-flex flex-wrap">
-        <!-- Contact Info Column -->
-        <div class="col-lg-4 d-flex flex-column gap-3">
-          <!-- Address -->
-          <div class="info-item d-flex align-items-center">
-            <button onclick="window.open('https://www.google.com/maps/place/CMR+Technical+Campus+(Autonomous+Engineering+College)/@17.5996971,78.4800838,15.38z/data=!4m10!1m2!2m1!1scmr+technical+campus!3m6!1s0x3bcb85db557ffa4d:0xa627221feea2fbec!8m2!3d17.5971392!4d78.4864977!15sChRjbXIgdGVjaG5pY2FsIGNhbXB1c1oWIhRjbXIgdGVjaG5pY2FsIGNhbXB1c5IBB2NvbGxlZ2XgAQA!16s%2Fg%2F11s3b07m6s?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D', '_blank')" title="Open in Google Maps" style="border: none; background: none; padding: 0;">
-              <i class="bi bi-geo-alt flex-shrink-0" style="font-size: 24px; color: #00aaff; cursor: pointer;"></i>
-            </button>
-            <div class="ps-3">
-              <h3>Address</h3>
-              <!-- <p>CMR Technical Campus, Hyderabad</p> -->
-            </div>
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="bi bi-house-gear"></i></div>
+            <span class="project-tag">Emerging Tech</span>
           </div>
-          
-
-          <!-- Call -->
-          <div class="info-item d-flex align-items-center">
-            <button onclick="window.location.href='tel:9490563425'" title="Call Me" style="border: none; background: none; padding: 0;">
-              <i class="bi bi-telephone flex-shrink-0" style="font-size: 24px; color: #00cc66; cursor: pointer;"></i>
-            </button>
-            <div class="ps-3">
-              <h3>Call :</h3>
-              <!-- <p>+91 9490563425</p> -->
-            </div>
-          </div>
-
-          <!-- Email -->
-          <!-- Email -->
-<div class="info-item d-flex align-items-center">
-  <button onclick="window.location.href='mailto:shushrutha1@gmail.com?subject=Hello%20Shushrutha!&body=I%20just%20wanted%20to%20reach%20out%20from%20your%20portfolio%20site.'" title="Send Email" style="border: none; background: none; padding: 0;">
-    <i class="bi bi-envelope flex-shrink-0" style="font-size: 24px; cursor: pointer;"></i>
-  </button>
-  <div class="ps-3">
-    <h3>Email :</h3>
-    <!-- <p>shushrutha1@gmail.com</p> -->
-  </div>
- 
-</div> <small class="text-muted">
-    Note: Email works best with Outlook or a configured mail app. Call links may not work on laptops without a calling app.
-  </small>
-
+          <h3>Multi-Agent Radiology assistant disease detection in Chest X-rays with LLM Reasoning and RAG integration</h3>
+          <p>WORKING ON IT...</p>
+          <span class="project-link"><i class="bi bi-layout-text-window"></i> Agentic AI · LLM · RAG</span>
         </div>
 
-        <!-- Contact Form Column -->
-        <div class="col-lg-8">
-          <form onsubmit="return sendWhatsAppMessage()" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-            <p class="text-center">Connect through WhatsApp. Write a message and click send.</p>
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><i class="bi bi-eye"></i></div>
+            <span class="project-tag">Computer Vision</span>
+          </div>
+          <h3>Smart Player Performance Analysis (Kho-Kho)</h3>
+          <p>Real-time athlete tracking system using YOLOv8, OpenCV, and Python - object detection, trajectory analysis, reaction time and speed estimation, with an inference pipeline optimized for real-time video. Built as Team Lead.</p>
+          <span class="project-link"><i class="bi bi-flag"></i> Team Lead &amp; Developer</span>
+        </div>
 
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-              </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-              </div>
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-              </div>
-              <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-                <button type="submit">Send Message</button>
-              </div>
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><img src="assets/img/SRC.png" alt="SRC" onerror="this.parentElement.innerHTML='<i class=\'bi bi-building\'></i>'"></div>
+            <span class="project-tag">Live · Web</span>
+          </div>
+          <h3>SRC Raghavendra Colony</h3>
+          <p>Public-facing colony website deployed on a static IP, with full ownership of setup and backend support.</p>
+          <!-- <a href="https://www.nalgondaeconomicsforum.org/SRC/" target="_blank" class="project-link">View live <i class="bi bi-arrow-right"></i></a> -->
+           <span class="project-link">Client Project</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><img src="assets/img/ET.png" alt="Excel Tuitions" onerror="this.parentElement.innerHTML='<i class=\'bi bi-mortarboard\'></i>'"></div>
+            <span class="project-tag">Live · Web</span>
+          </div>
+          <h3>Excel Tuitions</h3>
+          <p>Responsive educational website - interface design, content structure, and ongoing UI work.</p>
+          <!-- <a href="https://www.exceltuitions.com/" target="_blank" class="project-link">View live <i class="bi bi-arrow-right"></i></a> -->
+           <span class="project-link">Client Project</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><img src="assets/img/SAI.png" alt="Shirdi Sai Trust" onerror="this.parentElement.innerHTML='<i class=\'bi bi-heart\'></i>'"></div>
+            <span class="project-tag">Live · Full-Stack</span>
+          </div>
+          <h3>Shirdi Sai Trust Welfare Portal</h3>
+          <p>End-to-end donor, voucher, and financial management system in PHP, MySQL, JavaScript &amp; Bootstrap - automated donation tracking and reporting, cutting manual paperwork and duplicate records.</p>
+          <!-- <a href="https://www.nalgondaeconomicsforum.org/SAI" target="_blank" class="project-link">View live <i class="bi bi-arrow-right"></i></a> -->
+           <span class="project-link">Client Project</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><img src="assets/img/NEF.png" alt="Nalgonda Economics Forum" onerror="this.parentElement.innerHTML='<i class=\'bi bi-bar-chart\'></i>'"></div>
+            <span class="project-tag">Maintenance</span>
+          </div>
+          <h3>Nalgonda Economics Forum</h3>
+          <p>Ongoing website maintenance for an academic economics forum - design updates and backend troubleshooting.</p>
+          <span class="project-link"><i class="bi bi-tools"></i> Design &amp; backend support</span>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon"><img src="assets/img/TS.png" alt="TSWREIS" onerror="this.parentElement.innerHTML='<i class=\'bi bi-bank\'></i>'"></div>
+            <span class="project-tag">Infrastructure</span>
+          </div>
+          <h3>TSWREIS Women's Colleges - Web Infrastructure</h3>
+          <p>Scalable PHP-MySQL web applications on MVC architecture for TGSWREIS government degree colleges - responsive Bootstrap UI, secure auth, CRUD modules, admin dashboards, and CMS features across 20+ colleges.</p>
+          <span class="project-link"><i class="bi bi-hdd-stack"></i> Software support, 20+ colleges</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Certifications</div>
+        <h2 class="section-heading">Credentials &amp; coursework.</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card reveal"><i class="bi bi-patch-check"></i><div><h5>ServiceNow Certified System Administrator(CSA)</h5><p>CSA</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-patch-check-fill"></i><div><h5>ServiceNow Certified Application Developer(CAD)</h5><p>CAD</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-google"></i><div><h5>AI/ML Virtual Internship</h5><p>Google for Developers</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-cloud-arrow-up"></i><div><h5>Advisory Launchpad Trainee</h5><p>PwC · Cloud Engineering Track</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-cpu"></i><div><h5>Machine Learning</h5><p>NPTEL</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-cloud"></i><div><h5>Cloud Computing</h5><p>NPTEL</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-diagram-2"></i><div><h5>Data Mining</h5><p>NPTEL</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-link-45deg"></i><div><h5>Blockchain and Its Applications</h5><p>NPTEL</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-code-square"></i><div><h5>The Joy of Computing with Python</h5><p>NPTEL</p></div></div>
+        <div class="cert-card reveal"><i class="bi bi-broadcast-pin"></i><div><h5>IoT, Sensors and Actuators</h5><p>NPTEL</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Beyond the Code</div>
+        <h2 class="section-heading">Leadership &amp; extracurriculars.</h2>
+      </div>
+      <div class="ach-grid">
+        <div class="ach-card reveal">
+          <div class="ic"><i class="bi bi-trophy"></i></div>
+          <div><h4>Smart India Hackathon &amp; NeuraX 24-Hour Hackathon</h4><p>Led cross-functional teams across SIH 2024 &amp; 2025 (Internal Rounds) and the NeuraX 24-Hour Hackathon, delivering AI-driven software solutions under tight time constraints.</p></div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ic"><i class="bi bi-people"></i></div>
+          <div><h4>NSS Volunteer</h4><p>Active National Service Scheme volunteer contributing to community outreach while building leadership, teamwork, and project coordination skills.</p></div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ic"><i class="bi bi-mortarboard"></i></div>
+          <div><h4>Executive Head of CSI Local chapter</h4><p>Led the Computer Society of India (CSI) local chapter, organizing events, workshops, and technical sessions to foster a community of learning and collaboration among students and professionals.</p></div>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ic"><i class="bi bi-stack"></i></div>
+          <div><h4>Member of AI Club</h4><p>Anchoring the events and initiatives of the AI Club, promoting awareness and knowledge sharing in the field of artificial intelligence.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-heading">Let's build something.</h2>
+        <p class="section-sub">One tap is all it takes - call, WhatsApp, email, or find me on the map.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <div class="contact-row">
+            <button class="ic-circle" onclick="window.open('https://www.google.com/maps/place/CMR+Technical+Campus+(Autonomous+Engineering+College)/@17.5996971,78.4800838,15.38z/data=!4m10!1m2!2m1!1scmr+technical+campus!3m6!1s0x3bcb85db557ffa4d:0xa627221feea2fbec!8m2!3d17.5971392!4d78.4864977!15sChRjbXIgdGVjaG5pY2FsIGNhbXB1c1oWIhRjbXIgdGVjaG5pY2FsIGNhbXB1c5IBB2NvbGxlZ2XgAQA!16s%2Fg%2F11s3b07m6s?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D','_blank')" title="Open in Google Maps"><i class="bi bi-geo-alt"></i></button>
+            <div><h5>Address</h5><p>CMR Technical Campus, Hyderabad</p></div>
+          </div>
+          <div class="contact-row">
+            <button class="ic-circle" onclick="window.location.href='tel:9490563425'" title="Call Me"><i class="bi bi-telephone"></i></button>
+            <div><h5>Call</h5><p>+91 94905 63425</p></div>
+          </div>
+          <div class="contact-row">
+            <button class="ic-circle" onclick="window.location.href='mailto:shushrutha1@gmail.com?subject=Hello%20Shushrutha!&body=I%20just%20wanted%20to%20reach%20out%20from%20your%20portfolio%20site.'" title="Send Email"><i class="bi bi-envelope"></i></button>
+            <div><h5>Email</h5><p>shushrutha1@gmail.com</p></div>
+          </div>
+          <p class="contact-note">Note: email works best with Outlook or a configured mail app. Call links may not work on laptops without a calling app.</p>
+        </div>
+
+        <div class="form-card reveal">
+          <p class="form-intro">Connect through WhatsApp - write a message below and it'll open pre-filled, ready to send.</p>
+          <form id="waForm" onsubmit="return sendWhatsAppMessage()">
+            <div class="form-grid">
+              <input class="field" type="text" name="name" placeholder="Your Name" required>
+              <input class="field" type="email" name="email" placeholder="Your Email" required>
+              <input class="field full" type="text" name="subject" placeholder="Subject" required>
+              <textarea class="field full" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="submit-row">
+              <button type="submit" class="submit-btn">Send via WhatsApp</button>
+              <span class="form-msg" id="formMsg">Opening WhatsApp…</span>
             </div>
           </form>
-        </div><!-- End Contact Form -->
+        </div>
       </div>
     </div>
+  </section>
+</main>
 
+<footer>
+  <div class="container">
+    <p>DESIGNED &amp; BUILT BY SHUSHRUTHA THANGALLAPALLY · © 2026</p>
+    <div class="social-row">
+      <a href="https://github.com/Shushrutha1" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/shushrutha-t-00a8032bb/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://leetcode.com/u/shushrutha10/" target="_blank"><i class="bi bi-code-slash"></i></a>
+    </div>
   </div>
+</footer>
 
-</section><!-- /Contact Section -->
+<nav class="station-rail" id="stationRail">
+  <a class="station-dot" data-target="home" style="--sc:#4fd8ff"><span class="core"></span><span class="tip">Home</span></a>
+  <a class="station-dot" data-target="about" style="--sc:#9b7bff"><span class="core"></span><span class="tip">About</span></a>
+  <a class="station-dot" data-target="skills" style="--sc:#49ffb4"><span class="core"></span><span class="tip">Skills</span></a>
+  <a class="station-dot" data-target="experience" style="--sc:#ffb84f"><span class="core"></span><span class="tip">Experience</span></a>
+  <a class="station-dot" data-target="projects" style="--sc:#ff6bd6"><span class="core"></span><span class="tip">Projects</span></a>
+  <a class="station-dot" data-target="certifications" style="--sc:#4fe0c4"><span class="core"></span><span class="tip">Certifications</span></a>
+  <a class="station-dot" data-target="achievements" style="--sc:#ffd76b"><span class="core"></span><span class="tip">Achievements</span></a>
+  <a class="station-dot" data-target="contact" style="--sc:#4fd8ff"><span class="core"></span><span class="tip">Contact</span></a>
+</nav>
 
+<div class="hud-dock" id="hudDock">
+  <div class="hud-seg"><span class="hud-pulse"></span><span>SYS.ONLINE</span></div>
+  <div class="hud-sep"></div>
+  <div class="hud-seg hud-coords">17.59°N · 78.48°E - HYD</div>
+  <div class="hud-sep hud-coords"></div>
+  <div class="hud-seg" id="hudClock">--:--:--</div>
+  <div class="hud-sep"></div>
+  <div class="hud-section" id="hudSection"><i class="bi bi-house-door"></i><span>Home</span></div>
+  <div class="hud-bars"><span></span><span></span><span></span><span></span></div>
+</div>
 
-  </main>
+<div id="scroll-top"><i class="bi bi-arrow-up"></i></div>
 
- 
+<script>
+/* ---------- custom cursor ---------- */
+const dot = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+let mx=0,my=0, rx=0, ry=0;
+window.addEventListener('mousemove', e=>{
+  mx=e.clientX; my=e.clientY;
+  dot.style.left=mx+'px'; dot.style.top=my+'px';
+});
+(function loop(){
+  rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a, button, .skill-chip, .project-card, .tab-btn, input, textarea, #scroll-top').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>ring.classList.add('hovered'));
+  el.addEventListener('mouseleave', ()=>ring.classList.remove('hovered'));
+});
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+/* ---------- scroll progress ---------- */
+const progress = document.getElementById('scroll-progress');
+window.addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const pct = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
+  progress.style.width = pct+'%';
+  document.getElementById('scroll-top').classList.toggle('visible', h.scrollTop > 600);
+});
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+/* ---------- mobile nav ---------- */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>navLinks.classList.remove('open')));
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+/* ---------- active nav link on scroll ---------- */
+const SECTION_META = {
+  home:          {label:'Home',          icon:'bi-house-door',    color:'#4fd8ff', dx:0,   dy:0},
+  about:         {label:'About',         icon:'bi-person-badge',  color:'#9b7bff', dx:-55, dy:25},
+  skills:        {label:'Skills',        icon:'bi-cpu',           color:'#49ffb4', dx:60,  dy:-20},
+  experience:    {label:'Experience',    icon:'bi-briefcase',     color:'#ffb84f', dx:-40, dy:-35},
+  projects:      {label:'Projects',      icon:'bi-rocket-takeoff',color:'#ff6bd6', dx:55,  dy:35},
+  certifications:{label:'Certifications',icon:'bi-patch-check',   color:'#4fe0c4', dx:-60, dy:10},
+  achievements:  {label:'Achievements',  icon:'bi-trophy',        color:'#ffd76b', dx:35,  dy:-40},
+  contact:       {label:'Contact',       icon:'bi-broadcast',     color:'#4fd8ff', dx:0,   dy:15}
+};
+window.__starTarget = {color:'#4fd8ff', dx:0, dy:0};
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-  function sendWhatsAppMessage() {
-    const name = document.querySelector('input[name="name"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const subject = document.querySelector('input[name="subject"]').value;
-    const message = document.querySelector('textarea[name="message"]').value;
-  
-    if (!name || !email || !subject || !message) {
-      alert("Please fill in all fields before sending.");
-      return false;
-    }
-  
-    // Use only emojis that are known to work well on WhatsApp
-const fullMessage = `Hello,
+const sections = document.querySelectorAll('main section[id]');
+const navA = document.querySelectorAll('nav.links a');
+const stationDots = document.querySelectorAll('.station-dot');
+const hudSection = document.getElementById('hudSection');
+const hudDock = document.getElementById('hudDock');
 
-This is *${name}*. I’m reaching out after reviewing your portfolio for a professional inquiry.
+function setActiveSection(id){
+  const meta = SECTION_META[id];
+  if(!meta) return;
+  navA.forEach(a=>a.classList.remove('active'));
+  const link = document.querySelector('nav.links a[href="#'+id+'"]');
+  if(link) link.classList.add('active');
 
-📧 Email: ${email}  
-Subject: ${subject}  
+  stationDots.forEach(d=>d.classList.remove('active'));
+  const dot = document.querySelector('.station-dot[data-target="'+id+'"]');
+  if(dot) dot.classList.add('active');
 
-Message:  
-${message}
+  hudSection.innerHTML = `<i class="bi ${meta.icon}"></i><span>${meta.label}</span>`;
+  hudDock.style.setProperty('--sc', meta.color);
+  window.__starTarget = {color:meta.color, dx:meta.dx, dy:meta.dy};
+}
 
-Let me know if we can connect further regarding this.
+const navObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ setActiveSection(entry.target.id); }
+  });
+}, {rootMargin:'-45% 0px -50% 0px'});
+sections.forEach(s=>navObserver.observe(s));
 
-Regards,  
-${name}`;
+/* ---------- warp-travel effect for nav / station clicks ---------- */
+function spawnWarpComet(x0,y0,x1,y1,color){
+  const comet = document.createElement('div');
+  const dx = x1-x0, dy = y1-y0;
+  const len = Math.max(60, Math.hypot(dx,dy));
+  const ang = Math.atan2(dy,dx) * 180/Math.PI;
+  comet.className = 'warp-comet';
+  comet.style.setProperty('--x0', x0+'px');
+  comet.style.setProperty('--y0', y0+'px');
+  comet.style.setProperty('--x1', x1+'px');
+  comet.style.setProperty('--y1', y1+'px');
+  comet.style.setProperty('--ang', ang+'deg');
+  comet.style.setProperty('--sc', color);
+  comet.style.width = len+'px';
+  comet.style.height = '2px';
+  comet.style.left = '0';
+  comet.style.top = '0';
+  comet.style.transformOrigin = 'left center';
+  document.body.appendChild(comet);
+  setTimeout(()=>comet.remove(), 600);
+}
 
+function travelTo(id, originEl){
+  const target = document.getElementById(id);
+  if(!target) return;
+  const meta = SECTION_META[id] || {color:'#4fd8ff'};
+  const originRect = originEl ? originEl.getBoundingClientRect() : {left:innerWidth/2, top:0, width:0, height:0};
+  const x0 = originRect.left + originRect.width/2;
+  const y0 = originRect.top + originRect.height/2;
+  const x1 = innerWidth/2 + (Math.random()-0.5)*160;
+  const y1 = innerHeight/2 + (Math.random()-0.5)*120;
+  spawnWarpComet(x0,y0,x1,y1, meta.color);
 
-  
-    const phoneNumber = "919490563425"; // Include country code, no + sign
-    const encodedMessage = encodeURIComponent(fullMessage);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  
-    window.open(whatsappURL, '_blank');
-    return false;
+  const dot = document.querySelector('.station-dot[data-target="'+id+'"]');
+  if(dot){
+    dot.classList.remove('ping'); void dot.offsetWidth; dot.classList.add('ping');
+    setTimeout(()=>dot.classList.remove('ping'), 700);
   }
-</script>  
-  
-  
-  
+  setTimeout(()=>{ target.scrollIntoView({behavior:'smooth', block:'start'}); }, 160);
+}
 
+navA.forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href').replace('#','');
+    if(SECTION_META[id]){ e.preventDefault(); travelTo(id, a); }
+  });
+});
+stationDots.forEach(dot=>{
+  dot.addEventListener('click', ()=> travelTo(dot.dataset.target, dot));
+});
+
+/* ---------- live HUD clock ---------- */
+const hudClock = document.getElementById('hudClock');
+function tickClock(){
+  hudClock.textContent = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false});
+}
+tickClock();
+setInterval(tickClock, 1000);
+
+/* ---------- reveal on scroll ---------- */
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach((entry,i)=>{
+    if(entry.isIntersecting){
+      entry.target.style.setProperty('--i', i%8);
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+/* ---------- scroll top button ---------- */
+document.getElementById('scroll-top').addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+/* ---------- typed role text ---------- */
+const roles = ["AI/ML Engineer", "Full-Stack Developer", "Computer Vision Engineer", "ServiceNow Certified Developer", "MERN Stack Enthusiast", "LeetCode Warrior"];
+const typedEl = document.getElementById('roleTyped');
+let ri=0, ci=0, deleting=false;
+function typeLoop(){
+  const word = roles[ri];
+  if(!deleting){
+    ci++;
+    typedEl.textContent = word.slice(0,ci);
+    if(ci===word.length){ deleting=true; setTimeout(typeLoop, 1400); return; }
+  } else {
+    ci--;
+    typedEl.textContent = word.slice(0,ci);
+    if(ci===0){ deleting=false; ri=(ri+1)%roles.length; }
+  }
+  setTimeout(typeLoop, deleting ? 40 : 75);
+}
+typeLoop();
+
+/* ---------- skill tabs ---------- */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.skill-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelector('.skill-panel[data-panel="'+btn.dataset.tab+'"]').classList.add('active');
+  });
+});
+
+/* ---------- WhatsApp form ---------- */
+function sendWhatsAppMessage(){
+  const form = document.getElementById('waForm');
+  const name = form.name.value, email = form.email.value, subject = form.subject.value, message = form.message.value;
+  if(!name || !email || !subject || !message){ alert('Please fill in all fields before sending.'); return false; }
+  const fullMessage = `Hello,\nThis is *${name}*. I'm reaching out after reviewing your portfolio for a professional inquiry.\n📧 Email: ${email}\nSubject: ${subject}\nMessage:\n${message}\nLet me know if we can connect further regarding this.\nRegards,\n${name}`;
+  const phoneNumber = "919490563425";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+  document.getElementById('formMsg').classList.add('show');
+  window.open(url, '_blank');
+  setTimeout(()=>{ form.reset(); document.getElementById('formMsg').classList.remove('show'); }, 2500);
+  return false;
+}
+
+/* ---------- whole-page starfield / neural network ---------- */
+(function(){
+  const canvas = document.getElementById('neuralCanvas');
+  const ctx = canvas.getContext('2d');
+  let W,H, nodes=[];
+  let mouse = {x:-9999, y:-9999};
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  function nodeCountFor(w,h){
+    const area = w*h;
+    return Math.max(50, Math.min(160, Math.round(area/16000)));
+  }
+
+  function resize(){
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = W*DPR; canvas.height = H*DPR;
+    canvas.style.width = W+'px'; canvas.style.height = H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    initNodes();
+  }
+
+  function initNodes(){
+    const count = nodeCountFor(W,H);
+    nodes = [];
+    for(let i=0;i<count;i++){
+      nodes.push({
+        x: Math.random()*W, y: Math.random()*H,
+        vx: (Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3,
+        r: Math.random()*1.5+0.8
+      });
+    }
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  /* mouse position tracked in fixed viewport coordinates, works everywhere on the page */
+  window.addEventListener('mousemove', e=>{
+    mouse.x = e.clientX; mouse.y = e.clientY;
+  });
+  window.addEventListener('mouseleave', ()=>{ mouse.x=-9999; mouse.y=-9999; });
+  window.addEventListener('touchmove', e=>{
+    if(e.touches && e.touches[0]){ mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; }
+  }, {passive:true});
+
+  const LINK_DIST = 130;
+  const MOUSE_DIST = 190;
+
+  /* section-linked motion: the field drifts and recolors to match whichever section is active */
+  function hexToRgb(hex){
+    const h = hex.replace('#','');
+    return [parseInt(h.substring(0,2),16), parseInt(h.substring(2,4),16), parseInt(h.substring(4,6),16)];
+  }
+  let curColor = hexToRgb('#4fd8ff');
+  let curDX = 0, curDY = 0;
+
+  /* scroll parallax stacks on top of the section drift for extra depth */
+  let scrollTarget = 0, scrollY = 0;
+
+  window.addEventListener('scroll', ()=>{
+    scrollTarget = Math.max(-70, Math.min(70, -window.scrollY*0.05));
+  }, {passive:true});
+
+  function draw(){
+    const target = window.__starTarget || {color:'#4fd8ff', dx:0, dy:0};
+    const tc = hexToRgb(target.color);
+    curColor[0] += (tc[0]-curColor[0])*0.03;
+    curColor[1] += (tc[1]-curColor[1])*0.03;
+    curColor[2] += (tc[2]-curColor[2])*0.03;
+    curDX += (target.dx - curDX)*0.02;
+    curDY += (target.dy - curDY)*0.02;
+    scrollY += (scrollTarget - scrollY)*0.06;
+
+    const offX = curDX;
+    const offY = curDY + scrollY;
+    const [r,g,b] = curColor.map(Math.round);
+
+    ctx.clearRect(0,0,W,H);
+    for(let n of nodes){
+      n.x += n.vx; n.y += n.vy;
+      if(n.x<0||n.x>W) n.vx*=-1;
+      if(n.y<0||n.y>H) n.vy*=-1;
+    }
+    for(let i=0;i<nodes.length;i++){
+      const ax = nodes[i].x + offX, ay = nodes[i].y + offY;
+      for(let j=i+1;j<nodes.length;j++){
+        const b2=nodes[j];
+        const bx = b2.x + offX, by = b2.y + offY;
+        const d = Math.hypot(ax-bx, ay-by);
+        if(d<LINK_DIST){
+          ctx.strokeStyle = `rgba(${r},${g},${b},${(1-d/LINK_DIST)*0.32})`;
+          ctx.lineWidth=0.6;
+          ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(bx,by); ctx.stroke();
+        }
+      }
+      const dm = Math.hypot(ax-mouse.x, ay-mouse.y);
+      if(dm<MOUSE_DIST){
+        ctx.strokeStyle = `rgba(255,255,255,${(1-dm/MOUSE_DIST)*0.55})`;
+        ctx.lineWidth=0.9;
+        ctx.beginPath(); ctx.moveTo(ax,ay); ctx.lineTo(mouse.x,mouse.y); ctx.stroke();
+        nodes[i].x += (ax-mouse.x)*0.0009;
+        nodes[i].y += (ay-mouse.y)*0.0009;
+      }
+    }
+    if(mouse.x>-1000){
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(${r},${g},${b},0.95)`;
+      ctx.arc(mouse.x,mouse.y,2.4,0,Math.PI*2);
+      ctx.fill();
+    }
+    for(let n of nodes){
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(238,241,251,0.8)';
+      ctx.arc(n.x+offX,n.y+offY,n.r,0,Math.PI*2);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
 </body>
-
 </html>
